@@ -1,0 +1,1 @@
+# cvrde-qt-application
