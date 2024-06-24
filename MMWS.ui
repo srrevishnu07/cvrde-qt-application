@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="bytesTable">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>490</y>
+      <width>661</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="rowCount">
+     <number>1</number>
+    </property>
+    <property name="columnCount">
+     <number>10</number>
+    </property>
+    <row>
+     <property name="text">
+      <string>TX</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>Header</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Counter</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Azimuth LSB</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Azimuth MSB</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EL LSB</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EL MSB</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Zoom button</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Focus button</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Checksum</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Footer</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>10</y>
+      <width>71</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>MMWS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="DTVbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>DTV/TI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Zoominbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>🔎+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Zoomoutbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>🔍-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Fplusbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>F+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Fminusbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>440</y>
+      <width>61</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>F-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Synconbutton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>590</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+    </property>
+    <property name="text">
+     <string>SYNC ON</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>-10</y>
+      <width>261</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="degreeInput">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Degree</string>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="setDegreeButton">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>200</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>set</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="textvalue">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>430</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QSlider" name="verticalSlider">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>290</y>
+       <width>41</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(0, 85, 0)</string>
+     </property>
+     <property name="minimum">
+      <number>-8</number>
+     </property>
+     <property name="maximum">
+      <number>65</number>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="tickPosition">
+      <enum>QSlider::TicksBelow</enum>
+     </property>
+     <property name="tickInterval">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="RadarWidget" name="radarDisplayWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>141</width>
+       <height>131</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLabel" name="DTVStatusLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>470</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string>Daycam                 Ready</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="TIStatusLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>520</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string>TI                            Not Ready</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="FOVStatusLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>570</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 170, 0);
+background-color: rgb(27, 27, 27);
+color:rgb(170, 170, 0)
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="text">
+      <string>FOV                        0.1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>90</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>360</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>180</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>90</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>270</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>430</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SIGHT ELEVATION</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="degreeval">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>250</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>390</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>-8</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>280</y>
+       <width>21</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>65</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>250</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>SIGHT TRAVERSE</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>99</x>
+      <y>49</y>
+      <width>671</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(34, 34, 34);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1071</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_MAINT">
+    <property name="title">
+     <string>🛠MAINT</string>
+    </property>
+    <addaction name="actionMOTOR_BRAKE_PAGE"/>
+    <addaction name="actionDRIFT_CONTROL_PAGE"/>
+    <addaction name="actionCHECK_SYSTEM_PAGE"/>
+    <addaction name="actionENCODER_RESET_PAGE"/>
+   </widget>
+   <widget class="QMenu" name="menu_CONFIG">
+    <property name="font">
+     <font>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>⬛CONFIG</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_SIGHT">
+    <property name="title">
+     <string>🖥SIGHT</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuLOAD">
+    <property name="title">
+     <string>LOAD</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSTAB_OFF">
+    <property name="title">
+     <string>STAB OFF</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuALIGN">
+    <property name="title">
+     <string>ALIGN</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFINE">
+    <property name="title">
+     <string>FINE</string>
+    </property>
+   </widget>
+   <addaction name="menu_MAINT"/>
+   <addaction name="menu_CONFIG"/>
+   <addaction name="menu_SIGHT"/>
+   <addaction name="menuLOAD"/>
+   <addaction name="menuSTAB_OFF"/>
+   <addaction name="menuALIGN"/>
+   <addaction name="menuFINE"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionMOTOR_BRAKE_PAGE">
+   <property name="text">
+    <string>MOTOR BRAKE PAGE</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+  <action name="actionDRIFT_CONTROL_PAGE">
+   <property name="text">
+    <string>DRIFT CONTROL PAGE</string>
+   </property>
+  </action>
+  <action name="actionCHECK_SYSTEM_PAGE">
+   <property name="text">
+    <string>CHECK SYSTEM PAGE</string>
+   </property>
+  </action>
+  <action name="actionENCODER_RESET_PAGE">
+   <property name="text">
+    <string>ENCODER RESET PAGE</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RadarWidget</class>
+   <extends>QWidget</extends>
+   <header>radarwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
